@@ -109,5 +109,7 @@ function sortearAmigo() {
 
 function limparLista() {
     amigos = [];
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = '';
     atualizarLista();
 }
