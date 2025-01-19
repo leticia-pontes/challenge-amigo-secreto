@@ -39,6 +39,14 @@ function atualizarLista() {
     }
 }
 
+// Implementa uma função para remover um amigo da lista, para evitar sortear o mesmo nome
+function removerAmigoDaLista(nomeDoAmigo) {
+    let indiceDoNome = amigos.indexOf(nomeDoAmigo);
+    if (indiceDoNome != -1) {
+        amigos.splice(indiceDoNome, 1);
+    }
+}
+
 // Implementa uma função para sortear os amigos
 function sortearAmigo() {
     // Validar que há amigos disponíveis
@@ -50,14 +58,17 @@ function sortearAmigo() {
 
         // Gerar um índice aleatório
         let indiceAleatorio = parseInt(Math.random() * amigos.length);
+
         // Obter o nome sorteado
         let nomeSorteado = amigos[indiceAleatorio];
+        
         // Mostrar o resultado
         listaAmigos.innerHTML = '';
-
+        
         let resultado = document.getElementById('resultado');
         resultado.innerHTML = `O amigo secreto sorteado é: ${nomeSorteado}`;
-        amigos.pop(nomeSorteado);
+        
+        removerAmigoDaLista(nomeSorteado);
 
         setTimeout(function() {
             let resposta = confirm('Deseja sortear outro amigo?');
