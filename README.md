@@ -39,6 +39,7 @@ O projeto também está disponível online e pode ser acessado diretamente pelos
 - **Limpar lista:** O usuário pode limpar toda a lista de amigos com um botão dedicado, removendo todos os nomes da lista.
 
 ## Demonstração da Aplicação
+![**Demonstração da Aplicação**](./ChallengeAmigoSecretoDemonstracao.gif)
 
 ## Tecnologias utilizadas
 - JavaScript (foco do desafio)
