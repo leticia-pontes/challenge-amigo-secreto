@@ -1,5 +1,6 @@
 // Crie um array para armazenar os nomes
 let amigos = [];
+let botaoSortear = document.getElementById('botaoSortear');
 
 // Implementa uma função para agregar amigos
 function adicionarAmigo() {
@@ -38,33 +39,38 @@ function atualizarLista() {
     }
 }
 
-function limparElemento(elemento) {
-    elemento.innerHTML = '';
-}
-
 // Implementa uma função para sortear os amigos
 function sortearAmigo() {
     // Validar que há amigos disponíveis
     if (amigos.length > 1) {
+        // Desativa o botão "Sortear amigo" para impedir sobreposição
+        if (!botaoSortear.disabled) {
+            botaoSortear.setAttribute('disabled', true);
+        }
+
         // Gerar um índice aleatório
         let indiceAleatorio = parseInt(Math.random() * amigos.length);
         // Obter o nome sorteado
         let nomeSorteado = amigos[indiceAleatorio];
         // Mostrar o resultado
-        limparElemento(listaAmigos);
+        listaAmigos.innerHTML = '';
 
         let resultado = document.getElementById('resultado');
         resultado.innerHTML = `O amigo secreto sorteado é: ${nomeSorteado}`;
+        amigos.pop(nomeSorteado);
 
         setTimeout(function() {
             let resposta = confirm('Deseja sortear outro amigo?');
             
             if (resposta) {
-                amigos.pop(nomeSorteado);
-                sortearAmigo();
+                resultado.innerHTML = '';
+                setTimeout(function() {
+                    sortearAmigo();
+                }, 500);
             }
         }, 3000);
     } else {
         alert('Por favor, adicione pelo menos 2 amigos para sortear.');
+        atualizarLista();
     }
 }
