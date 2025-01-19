@@ -47,7 +47,11 @@ function atualizarLista() {
         let botaoExcluir = criarImagemBotao('Excluir', 'assets/excluir.png');
 
         botaoExcluir.addEventListener('click', ((indice) => {
-            return () => removerAmigoDaLista(indice);
+            return () => {
+                if (confirm("Você tem certeza que deseja excluir este amigo da lista?")) {
+                    removerAmigoDaLista(indice)
+                }
+            };
         })(contador));
         
         nome.innerHTML = amigos[contador];
@@ -101,4 +105,9 @@ function sortearAmigo() {
         botaoSortear.removeAttribute('disabled');
         atualizarLista();
     }
+}
+
+function limparLista() {
+    amigos = [];
+    atualizarLista();
 }

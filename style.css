@@ -160,3 +160,7 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+#botaoLimparLista {
+    filter: invert(1) grayscale(100%) brightness(150%);
+}

@@ -25,17 +25,18 @@ Siga os passos abaixo para baixar e executar o projeto:
    - Dê um duplo clique no arquivo `index.html` para abri-lo diretamente no navegador.
 
 ### Acesso ao Projeto
-O projeto também está disponível online e pode ser acessado diretamente pelo link: https://challengeamigosecreto.vercel.app/
+O projeto também está disponível online e pode ser acessado diretamente pelos links: 
+- https://leticia-pontes.github.io/challenge-amigo-secreto/
+- https://challengeamigosecreto.vercel.app/
 
 ## Funcionalidades
 
-### Funcionalidades Básicas
 - **Adicionar nomes:** Os usuários escreverão o nome de um amigo em um campo de texto e o adicionarão a uma lista visível ao clicar em "Adicionar".
 - **Validar entrada:** Se o campo de texto estiver vazio, o programa exibirá um alerta solicitando um nome válido.
 - **Visualizar a lista:** Os nomes inseridos aparecerão em uma lista abaixo do campo de entrada.
 - **Sorteio aleatório:** Ao clicar no botão "Sortear Amigo", um nome da lista será selecionado aleatoriamente e exibido na página.
-
-### Funcionalidades Extras
+- **Excluir nome:** O usuário pode remover qualquer nome da lista clicando no ícone de excluir ao lado do nome.
+- **Limpar lista:** O usuário pode limpar toda a lista de amigos com um botão dedicado, removendo todos os nomes da lista.
 
 ## Demonstração da Aplicação
 
