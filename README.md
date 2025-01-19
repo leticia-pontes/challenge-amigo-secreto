@@ -24,6 +24,9 @@ Siga os passos abaixo para baixar e executar o projeto:
    - Abra a pasta descompactada.
    - Dê um duplo clique no arquivo `index.html` para abri-lo diretamente no navegador.
 
+### Acesso ao Projeto
+O projeto também está disponível online e pode ser acessado diretamente pelo link: https://challengeamigosecreto.vercel.app/
+
 ## Funcionalidades
 
 ### Funcionalidades Básicas
@@ -35,9 +38,6 @@ Siga os passos abaixo para baixar e executar o projeto:
 ### Funcionalidades Extras
 
 ## Demonstração da Aplicação
-
-## Acesso ao Projeto
-O projeto esta hospedado em https://challengeamigosecreto.vercel.app/
 
 ## Tecnologias utilizadas
 - JavaScript (foco do desafio)
