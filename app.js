@@ -45,7 +45,7 @@ function limparElemento(elemento) {
 // Implementa uma função para sortear os amigos
 function sortearAmigo() {
     // Validar que há amigos disponíveis
-    if (amigos.length != 0) {
+    if (amigos.length > 1) {
         // Gerar um índice aleatório
         let indiceAleatorio = parseInt(Math.random() * amigos.length);
         // Obter o nome sorteado
@@ -55,5 +55,16 @@ function sortearAmigo() {
 
         let resultado = document.getElementById('resultado');
         resultado.innerHTML = `O amigo secreto sorteado é: ${nomeSorteado}`;
+
+        setTimeout(function() {
+            let resposta = confirm('Deseja sortear outro amigo?');
+            
+            if (resposta) {
+                amigos.pop(nomeSorteado);
+                sortearAmigo();
+            }
+        }, 3000);
+    } else {
+        alert('Por favor, adicione pelo menos 2 amigos para sortear.');
     }
 }
